@@ -1,14 +1,17 @@
 import numpy as np
-# Insert the temperature and precipitation data for the 12 months of the year. Don't forget to change the hemisphere if necessary (Write "Nord" for North ans "Sud" for South).
-# Insérer les données climatiques : température en °C et précipitation en mm, Noubliez pas d'indiquer l'hémisphère (Nord ou Sud).
-Te = np.array([19.9,19.7,18.5,16.3,13.2,10.7,10.3,13.2,16.6,18.5,19.0,19.9])
+# Insert the temperature and precipitation data for the 12 months of the year. Don't forget to change the hemisphere if necessary. // Insérer les données climatiques : température en °C et précipitation en mm, Noubliez pas d'indiquer l'hémisphère (Nord ou Sud).
+# Array of temperatures in °C (12 months, fist month is January) // Tableau des températures en °C (12 mois, le premier mois est celui de janvier)
+Te = np.array([19.9,19.7,18.5,16.3,13.2,10.7,10.3,13.2,16.6,18.5,19.0,19.9]) 
+# Array of precipitation in mm (12 months, fist month is January) // Tableau des précipitation en mm (12 mois, le premier mois est celui de janvier)
 Pr = np.array([136.4,109.8,86.7,41.0,27.6,16.3,7.4,19.6,16.5,85.4,72.9,117.8])
-Hm = 'Sud'
+# True if North Hemisphere, False if South Hemisphere // True si hémisphère Nord, False si hémisphère Sud
+North = False
+# After the data is entered, run the program. // Après avoir entré les données, exécutez le programme.
 
 # Array of summer month precipitation in mm
 # Array of temperatures in summer in °C (Depending on the hemisphere winter and summer are reversed)
 #Tableau des températures en été en °C (En fonction de l'hémisphère l'hiver et l'été sont inversés)
-if Hm == 'Nord':
+if North == True:
     STe = np.array([Te[3], Te[4], Te[5], Te[6], Te[7], Te[8]])
     WPr = np.array([Pr[0], Pr[1], Pr[2], Pr[9], Pr[10], Pr[11]]) #Tableau des précipitation des mois d'hiver en mm
     SPr = np.array([Pr[3], Pr[4], Pr[5], Pr[6], Pr[7], Pr[8]])
